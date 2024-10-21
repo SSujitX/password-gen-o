@@ -3,6 +3,7 @@ import subprocess
 
 def get_version():
     try:
+        # Get the latest tag from Git
         version = (
             subprocess.run(
                 ["git", "describe", "--tags", "--abbrev=0"], stdout=subprocess.PIPE
