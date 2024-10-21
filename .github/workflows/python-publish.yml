@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch full history including tags
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -18,8 +20,7 @@ jobs:
           python-version: "3.x"
 
       - name: Generate dynamic version
-        run: |
-          python generate_version.py
+        run: python generate_version.py
 
       - name: Install dependencies
         run: |
