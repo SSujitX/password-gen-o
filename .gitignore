@@ -73,7 +73,6 @@ venv.bak/
 .vscode/
 
 # GitHub-specific
-.github/
 
 # Local files
 *.swp
